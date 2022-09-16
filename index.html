@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Create Array And Add Element</title>
+</head>
+<body>
+<div class="container">
+    <label>Enter Element:</label>
+    <input type="text" id="inputElement">
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onclick="display()">Display</button>
+    <hr>
+    <p id="result">...</p>
+</div>
+<script>
+    let array = Array();
+    let input = document.getElementById('inputElement');
+    let index = 0;
+    let result = '';
+
+    function add() {
+        array[index] = input.value
+        alert("Element: " + array[index] + " Added at index " + index);
+        index++
+        input.value = ''
+    }
+
+    function display() {
+        for (let i = 0; i < array.length; i++) {
+             result = result + "Element " + i + ": " + array[i] + "<br>"
+        }
+        document.getElementById('result').innerHTML = result;
+    }
+
+</script>
+</body>
+</html>
